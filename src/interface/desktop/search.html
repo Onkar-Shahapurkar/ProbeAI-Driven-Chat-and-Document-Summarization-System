@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+        <title>probeAI - Search</title>
+
+        <link rel="icon" type="image/png" sizes="128x128" href="./assets/icons/favicon-128x128.png">
+        <link rel="stylesheet" href="./assets/probeAI.css">
+        <link rel="stylesheet" href="./assets/search.css">
+    </head>
+    <script type="text/javascript" src="./assets/org.min.js"></script>
+    <script type="text/javascript" src="./assets/markdown-it.min.js"></script>
+    <script src="./utils.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", async() => {
+            // Setup the header pane
+            document.getElementById("probeAI-header").innerHTML = await populateHeaderPane();
+            // Setup the nav menu
+            document.getElementById("profile-picture").addEventListener("click", toggleNavMenu);
+            // Set the active nav pane
+            document.getElementById("search-nav")?.classList.add("probeAI-nav-selected");
+        })
+    </script>
+
+    <body>
+        <!--Add Header Logo and Nav Pane-->
+        <div id="probeAI-header" class="probeAI-header"></div>
+
+        <!--Add Text Box To Enter Query, Trigger Incremental Search OnChange -->
+        <input type="text" id="query" class="option" onkeyup=incrementalSearch(event) autofocus="autofocus" placeholder="Search your knowledge base using natural language">
+
+        <!-- Section to Render Results -->
+        <div id="results"></div>
+    </body>
+</html>
