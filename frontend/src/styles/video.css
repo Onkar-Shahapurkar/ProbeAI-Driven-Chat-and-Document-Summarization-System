@@ -1,0 +1,248 @@
+.video-page {
+  width: 100%;
+  height: calc(100vh - 116px);
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+.video-header {
+  margin-bottom: 26px;
+}
+
+.video-header h1 {
+  margin: 0;
+  font-size: 38px;
+  letter-spacing: -1.5px;
+}
+
+.video-header > div > p:last-child {
+  max-width: 650px;
+  margin-top: 10px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.video-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 55px 30px 28px;
+  border: 1px dashed var(--border-hover);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(139, 92, 246, 0.12),
+      transparent 50%
+    ),
+    var(--bg-panel);
+}
+
+.video-upload input {
+  display: none;
+}
+
+.video-upload label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-bright);
+  cursor: pointer;
+}
+
+.video-upload label strong {
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.video-upload label span {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.video-upload button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 11px 17px;
+  border: 1px solid var(--border-hover);
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+}
+
+.video-upload button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.video-error {
+  margin-top: 16px;
+  padding: 12px 15px;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 10px;
+  background: rgba(239, 68, 68, 0.08);
+  color: #fca5a5;
+}
+
+.video-result {
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-panel);
+  backdrop-filter: blur(18px);
+}
+
+.result-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.result-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--accent-soft);
+  color: var(--accent-bright);
+}
+
+.result-heading span {
+  color: var(--accent-bright);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.result-heading h2 {
+  margin: 4px 0 0;
+  font-size: 18px;
+}
+
+.video-result > p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  white-space: pre-wrap;
+}
+
+.transcript {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+@media (max-width: 700px) {
+  .video-header h1 {
+    font-size: 30px;
+  }
+
+  .video-upload {
+    padding: 40px 20px 24px;
+  }
+}
+
+.summary-content,
+.answer-content {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.summary-content > :first-child,
+.answer-content > :first-child {
+  margin-top: 0;
+}
+
+.summary-content > :last-child,
+.answer-content > :last-child {
+  margin-bottom: 0;
+}
+
+.summary-content h1,
+.summary-content h2,
+.summary-content h3,
+.answer-content h1,
+.answer-content h2,
+.answer-content h3 {
+  color: var(--text-primary);
+  margin: 18px 0 8px;
+}
+
+.summary-content ul,
+.summary-content ol,
+.answer-content ul,
+.answer-content ol {
+  padding-left: 22px;
+}
+
+.summary-content li,
+.answer-content li {
+  margin: 5px 0;
+}
+
+.summary-content strong,
+.answer-content strong {
+  color: var(--accent-bright);
+}
+
+.summary-content code,
+.answer-content code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-bright);
+}
+
+.summary-content pre {
+  padding: 14px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #080812;
+}
+
+.summary-content {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.summary-content > :first-child {
+  margin-top: 0;
+}
+
+.summary-content > :last-child {
+  margin-bottom: 0;
+}
+
+.summary-content h1,
+.summary-content h2,
+.summary-content h3 {
+  margin: 18px 0 8px;
+  color: var(--text-primary);
+}
+
+.summary-content ul,
+.summary-content ol {
+  padding-left: 22px;
+}
+
+.summary-content li {
+  margin: 5px 0;
+}
+
+.summary-content strong {
+  color: var(--accent-bright);
+}
+
+.summary-content code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-bright);
+}
