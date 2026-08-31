@@ -874,9 +874,7 @@ docs/
 └── analytics.png
 ```
 
-Then add:
 
-``` md
 ## Dashboard
 
 ![ProbeAI Dashboard](docs/dashboard.png)
@@ -896,7 +894,6 @@ Then add:
 ## Analytics
 
 ![ProbeAI Analytics](docs/analytics.png)
-```
 
 ------------------------------------------------------------------------
 
